@@ -5,11 +5,13 @@ public class News {
     private String mTitle;
     private String mSection;
     private String mDate;
+    private String mUrl;
 
-    public News(String title, String section, String date) {
+    public News(String title, String section, String date, String url) {
         mTitle = title;
         mSection = section;
         mDate = date;
+        mUrl = url;
     }
 
     public String getTitle() {
@@ -22,5 +24,19 @@ public class News {
 
     public String getDate() {
         return mDate;
+    }
+
+    public String getUrl() {
+        return mUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "News{" +
+                "mTitle='" + mTitle + '\'' +
+                ", mSection='" + mSection + '\'' +
+                ", mDate='" + mDate + '\'' +
+                ", mUrl='" + mUrl + '\'' +
+                '}';
     }
 }

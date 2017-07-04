@@ -12,23 +12,14 @@ import butterknife.ButterKnife;
  */
 
 public class ViewHolder {
-    private @BindView(R.id.newsTitle) TextView mNewsTitle;
-    private @BindView(R.id.newsTitle) TextView mNewsSection;
-    private @BindView(R.id.newsTitle) TextView mNewsDate;
+    @BindView(R.id.newsTitle)
+    TextView mNewsTitle;
+    @BindView(R.id.newsSection)
+    TextView mNewsSection;
+    @BindView(R.id.newsDate)
+    TextView mNewsDate;
 
     public ViewHolder(@NonNull View view) {
         ButterKnife.bind(this, view);
-    }
-
-    public TextView getNewsTitle() {
-        return mNewsTitle;
-    }
-
-    public TextView getNewsSection() {
-        return mNewsSection;
-    }
-
-    public TextView getNewsDate() {
-        return mNewsDate;
     }
 }
