@@ -8,4 +8,38 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- content cards -->
+    <!-- vertical card -->
+    <style name="verticalCardLinearLayout">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="cardVertical">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/default_margin</item>
+        <item name="android:layout_marginRight">@dimen/default_margin</item>
+        <item name="android:layout_marginTop">@dimen/default_margin_half</item>
+        <item name="android:layout_marginBottom">@dimen/default_margin_half</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+    </style>
+
+    <style name="cardVerticalHeading">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">@dimen/default_padding</item>
+        <item name="android:textSize">@dimen/vertical_card_heading</item>
+    </style>
+
+    <style name="cardVerticalDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/card_divider_height</item>
+        <item name="android:background">@color/cardDivider</item>
+    </style>
+
+
 </resources>

@@ -1,6 +1,7 @@
 package pl.bartekpawlowski.newsapp;
 
 import android.app.LoaderManager.LoaderCallbacks;
+import android.content.Loader;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
@@ -18,7 +19,6 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
     @BindView(R.id.list)
     ListView mNewsListView;
     // ArrayList members
-    private ArrayList<News> mNewsList;
     private NewsAdapter mNewsListAdapter;
 
     @Override
@@ -36,17 +36,17 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
     }
 
     @Override
-    public android.content.Loader<List<News>> onCreateLoader(int i, Bundle bundle) {
+    public Loader<List<News>> onCreateLoader(int i, Bundle bundle) {
         return new NewsLoader(this, "");
     }
 
     @Override
-    public void onLoadFinished(android.content.Loader<List<News>> loader, List<News> newses) {
+    public void onLoadFinished(Loader<List<News>> loader, List<News> newses) {
         mNewsListAdapter.addAll(newses);
     }
 
     @Override
-    public void onLoaderReset(android.content.Loader<List<News>> loader) {
+    public void onLoaderReset(Loader<List<News>> loader) {
         mNewsListAdapter.clear();
     }
 }
