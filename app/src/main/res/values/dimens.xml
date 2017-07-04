@@ -11,4 +11,6 @@
     <dimen name="vertical_card_meta_text">12sp</dimen>
     <dimen name="meta_section_margin">8dp</dimen>
     <dimen name="meta_section_padding">8dp</dimen>
+    <!-- list divider -->
+    <dimen name="list_divide_height">0dp</dimen>
 </resources>

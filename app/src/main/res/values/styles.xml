@@ -8,8 +8,29 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!-- content cards -->
-    <!-- vertical card -->
+    <!-- main container -->
+    <style name="mainContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- error handling elements -->
+    <style name="errorElement">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:padding">@dimen/default_padding</item>
+    </style>
+
+    <!-- main list view -->
+    <style name="list">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">@dimen/list_divide_height</item>
+    </style>
+
+    <!-- content card -->
     <style name="verticalCardLinearLayout">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
