@@ -42,8 +42,6 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
     String noInternetConnection;
 
     // internet connection
-    private ConnectivityManager mConnectivityManager;
-    private NetworkInfo mNetworkInfo;
     private boolean isNetwork;
 
     @Override
