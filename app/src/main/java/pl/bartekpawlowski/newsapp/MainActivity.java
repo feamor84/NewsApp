@@ -4,6 +4,7 @@ import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Loader;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,9 +17,11 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
     // constants
     private final static int LOADER_ID = 1;
+    private final static String LOG_TAG = "Main Activity";
+
+    // ArrayList members
     @BindView(R.id.list)
     ListView mNewsListView;
-    // ArrayList members
     private NewsAdapter mNewsListAdapter;
 
     @Override
@@ -35,14 +38,17 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
         getLoaderManager().initLoader(LOADER_ID, null, this);
     }
 
+
     @Override
     public Loader<List<News>> onCreateLoader(int i, Bundle bundle) {
-        return new NewsLoader(this, "");
+        Log.i(LOG_TAG, "onCreateLoader started");
+        return new NewsLoader(this, "world");
     }
 
     @Override
-    public void onLoadFinished(Loader<List<News>> loader, List<News> newses) {
-        mNewsListAdapter.addAll(newses);
+    public void onLoadFinished(Loader<List<News>> loader, List<News> data) {
+        Log.i(LOG_TAG, "onLoadFinished started");
+        mNewsListAdapter.addAll(data);
     }
 
     @Override

@@ -33,12 +33,38 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:padding">@dimen/default_padding</item>
         <item name="android:textSize">@dimen/vertical_card_heading</item>
+        <item name="android:textColor">@color/newsTextColor</item>
     </style>
 
     <style name="cardVerticalDivider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/card_divider_height</item>
         <item name="android:background">@color/cardDivider</item>
+    </style>
+
+    <style name="cardVerticalMetaContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="cardVerticalMetaSection">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/meta_section_margin</item>
+        <item name="android:padding">@dimen/meta_section_padding</item>
+        <item name="android:textSize">@dimen/vertical_card_meta_text</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/sectionTextColor</item>
+    </style>
+
+    <style name="cardVerticalMetaDate">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:padding">@dimen/default_padding</item>
+        <item name="android:textSize">@dimen/vertical_card_meta_text</item>
+        <item name="android:textColor">@color/dateTextColor</item>
     </style>
 
 

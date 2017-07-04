@@ -39,7 +39,7 @@ public final class JsonHelper {
                                 result.getString("webPublicationDate"),
                                 result.getString("webUrl")
                         );
-                        Log.i(LOG_TAG, tmp.toString());
+                        newsList.add(tmp);
                     }
                 }
             }

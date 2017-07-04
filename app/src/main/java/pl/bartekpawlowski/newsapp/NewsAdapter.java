@@ -1,6 +1,8 @@
 package pl.bartekpawlowski.newsapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -34,8 +36,29 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
         viewHolder.mNewsTitle.setText(currentNews.getTitle());
         viewHolder.mNewsSection.setText(currentNews.getSection());
-        viewHolder.mNewsDate.setText(currentNews.getDate());
+        viewHolder.mNewsDate.setText(modifyDate(currentNews.getDate()));
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse(currentNews.getUrl());
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                if (intent.resolveActivity(getContext().getPackageManager()) != null) {
+                    getContext().startActivity(intent);
+                }
+            }
+        });
 
         return convertView;
+    }
+
+    private String modifyDate(String date) {
+        StringBuffer stringBuffer = new StringBuffer(date);
+
+        stringBuffer = stringBuffer.replace(stringBuffer.indexOf("T"), stringBuffer.indexOf("T") + 1, ", ");
+        stringBuffer = stringBuffer.deleteCharAt(stringBuffer.length() - 1);
+
+        return stringBuffer.toString();
     }
 }

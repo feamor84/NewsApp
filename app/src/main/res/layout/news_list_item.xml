@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/cardVertical">
 
-    <TextView
+    <LinearLayout style="@style/verticalCardLinearLayout">
+
+        <TextView
         android:id="@+id/newsTitle"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+            style="@style/cardVerticalHeading"
+            tools:text="Heading" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/placeDivider"
+            style="@style/cardVerticalDivider" />
+
+        <RelativeLayout style="@style/cardVerticalMetaContainer">
 
         <TextView
             android:id="@+id/newsSection"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            style="@style/cardVerticalMetaSection"
+            tools:text="Section" />
 
         <TextView
             android:id="@+id/newsDate"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            style="@style/cardVerticalMetaDate"
+            tools:text="2017-03-22, 19:22" />
 
-    </LinearLayout>
+        </RelativeLayout>
 
 </LinearLayout>
+
+</android.support.v7.widget.CardView>

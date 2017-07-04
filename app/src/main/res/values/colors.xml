@@ -5,6 +5,10 @@
     <color name="colorAccent">#FF4081</color>
 
     <!--Custom colors-->
-    <color name="mainBackgroundColor">#F5F5F5</color>
+    <color name="mainBackgroundColor">#ECEFF1</color>
     <color name="cardDivider">#E0E0E0</color>
+    <!-- Text colors -->
+    <color name="newsTextColor">#37474F</color>
+    <color name="dateTextColor">#78909C</color>
+    <color name="sectionTextColor">#ECEFF1</color>
 </resources>

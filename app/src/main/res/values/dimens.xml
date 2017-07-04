@@ -7,10 +7,8 @@
     <dimen name="card_corner_radius">1dp</dimen>
     <dimen name="card_elevation">5dp</dimen>
     <dimen name="card_divider_height">1dp</dimen>
-    <dimen name="vertical_card_heading">16sp</dimen>
-    <dimen name="vertical_card_image_view_height">200dp</dimen>
-    <dimen name="horizontal_card_height">100dp</dimen>
-    <dimen name="horizontal_card_image_view_height">100dp</dimen>
-    <dimen name="horizontal_card_image_view_width">100dp</dimen>
-    <dimen name="horizontal_card_heading">14sp</dimen>
+    <dimen name="vertical_card_heading">18sp</dimen>
+    <dimen name="vertical_card_meta_text">12sp</dimen>
+    <dimen name="meta_section_margin">8dp</dimen>
+    <dimen name="meta_section_padding">8dp</dimen>
 </resources>
