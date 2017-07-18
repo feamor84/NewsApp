@@ -18,7 +18,7 @@ import java.nio.charset.Charset;
 
 public final class HttpHelper {
 
-    private final static String API_KEY = "76efb60b-5116-40bb-bf4d-0738aff00335";
+    private final static String API_KEY = "test";
     private final static String GUARDIAN_URL = "https://content.guardianapis.com/search";
     private final static String LOG_TAG = "HTTP helper";
     private final static int TIMEOUT = 1000;
